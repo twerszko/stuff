@@ -1,0 +1,127 @@
+<templateSet group="user">
+    <template name="log" value=" private static final Logger LOG = LoggerFactory.getLogger($className$.class);"
+              toReformat="false" toShortenFQNames="true">
+        <variable name="className" expression="className()" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JAVA_CODE" value="true"/>
+            <option name="JAVA_STATEMENT" value="true"/>
+            <option name="JAVA_EXPRESSION" value="true"/>
+            <option name="JAVA_DECLARATION" value="true"/>
+            <option name="JAVA_COMMENT" value="true"/>
+            <option name="JAVA_STRING" value="true"/>
+            <option name="COMPLETION" value="true"/>
+        </context>
+    </template>
+    <template name="should"
+              value="@Test&#10;public void should_() throws Exception {&#10;    // given&#10;    $END$&#10;            &#10;    // when&#10;    &#10;    &#10;    // then&#10;}"
+              toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="JAVA_CODE" value="true"/>
+            <option name="JAVA_STATEMENT" value="true"/>
+            <option name="JAVA_EXPRESSION" value="true"/>
+            <option name="JAVA_DECLARATION" value="true"/>
+            <option name="JAVA_COMMENT" value="true"/>
+            <option name="JAVA_STRING" value="true"/>
+            <option name="COMPLETION" value="true"/>
+        </context>
+    </template>
+    <template name="before" value="@Before&#10;public void setUp() {&#10;    $END$&#10;}" toReformat="false"
+              toShortenFQNames="true">
+        <context>
+            <option name="JAVA_CODE" value="true"/>
+            <option name="JAVA_STATEMENT" value="true"/>
+            <option name="JAVA_EXPRESSION" value="true"/>
+            <option name="JAVA_DECLARATION" value="true"/>
+            <option name="JAVA_COMMENT" value="true"/>
+            <option name="JAVA_STRING" value="true"/>
+            <option name="COMPLETION" value="true"/>
+        </context>
+    </template>
+    <template name="after" value="@After&#10;public void cleanUp() {&#10;    $END$&#10;}" toReformat="false"
+              toShortenFQNames="true">
+        <context>
+            <option name="JAVA_CODE" value="true"/>
+            <option name="JAVA_STATEMENT" value="true"/>
+            <option name="JAVA_EXPRESSION" value="true"/>
+            <option name="JAVA_DECLARATION" value="true"/>
+            <option name="JAVA_COMMENT" value="true"/>
+            <option name="JAVA_STRING" value="true"/>
+            <option name="COMPLETION" value="true"/>
+        </context>
+    </template>
+    <template name="jstest"
+              value="(function () {&#10;    'use strict';&#10;    &#10;    describe('$END$', function () {&#10;        beforeEach(module('ncWebUiApp'));&#10;        &#10;        beforeEach(inject(function ($injector) {&#10;        &#10;        }));&#10;    });&#10;})(this);"
+              toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="JAVA_SCRIPT" value="true"/>
+            <option name="JS_EXPRESSION" value="true"/>
+            <option name="JSX_HTML" value="true"/>
+            <option name="JS_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="angular-value"
+              value="(function (global) {&#10;    'use strict';&#10;&#10;    global.angular&#10;        .module('ncWebUiApp')&#10;        .value('$END$', Object.freeze(&#10;            {&#10;                &#10;            }&#10;        ));&#10;})(this);"
+              toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="JAVA_SCRIPT" value="true"/>
+            <option name="JS_EXPRESSION" value="true"/>
+            <option name="JSX_HTML" value="true"/>
+            <option name="JS_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="jslog" value="const LOG = loggers.getLogger('$END$');" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="JAVA_SCRIPT" value="true"/>
+            <option name="JS_EXPRESSION" value="true"/>
+            <option name="JSX_HTML" value="true"/>
+            <option name="JS_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="jsdescribe" value=" describe('$END$', function () {&#10; });" toReformat="false"
+              toShortenFQNames="true">
+        <context>
+            <option name="JAVA_SCRIPT" value="true"/>
+            <option name="JS_EXPRESSION" value="true"/>
+            <option name="JSX_HTML" value="true"/>
+            <option name="JS_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="angular-service"
+              value="(function (global) {&#10;    'use strict';&#10;&#10;    global.angular&#10;        .module('ncWebUiApp')&#10;        .service('$END$', [myService]);&#10;&#10;    function myService(){&#10;        return {&#10;&#10;        };&#10;    }&#10;&#10;})(this);"
+              toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="JAVA_SCRIPT" value="true"/>
+            <option name="JS_EXPRESSION" value="true"/>
+            <option name="JSX_HTML" value="true"/>
+            <option name="JS_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="jsit"
+              value="it('$END$', function (done) {&#10;    // given&#10;    // when&#10;    // then    &#10;});"
+              toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="JAVA_SCRIPT" value="true"/>
+            <option name="JS_EXPRESSION" value="true"/>
+            <option name="JSX_HTML" value="true"/>
+            <option name="JS_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="flux-handle"
+              value="function handle(event){&#10;    switch(event.type){&#10;        default:&#10;            break;&#10;    }&#10;}"
+              toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="JAVA_SCRIPT" value="true"/>
+            <option name="JS_EXPRESSION" value="true"/>
+            <option name="JSX_HTML" value="true"/>
+            <option name="JS_STATEMENT" value="true"/>
+        </context>
+    </template>
+    <template name="console" value="console.log($END$);" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="JAVA_SCRIPT" value="true"/>
+            <option name="JS_EXPRESSION" value="true"/>
+            <option name="JSX_HTML" value="true"/>
+            <option name="JS_STATEMENT" value="true"/>
+        </context>
+    </template>
+</templateSet>
